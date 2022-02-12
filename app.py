@@ -6,9 +6,11 @@ import matplotlib.pyplot as plt # PLotagem de graficos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
+
+import os # importa biblioteca para entrada e saída de arquivo
+
 app = Flask(__name__)
 
-#import os # importa biblioteca para entrada e saída de arquivo
 
 # Carregando arquivo csv (arquivos separados por vírgulas pelo Excel) do banco de dados
 # usecols, seleciona colunas que possivelmente serão usadas no treinamento do algoritmo
@@ -137,6 +139,5 @@ def resultado():
 #if __name__=="__main__": # Verifica se __name__ esta contido neste script
     #app.run(debug=True) # Executa este script, definindo endereço do servidor que ira rodar a aplicação e a porta
     if __name__=='main':
-    #port = int(os.getenv('PORT'), '5000')
-    port = '5000'
+    port = int(os.getenv('PORT'), '5000')
     app.run(host='0.0.0.0', port = port)
