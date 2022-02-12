@@ -1,0 +1,18 @@
+<!-- Conteudo a ser exibido na página -->
+
+{% extends "layoult_principal.html" %} <!-- Restante do conteudo esta no arquivo 'layoult.html' -->
+{% block body %} <!-- Indica que o conteudo que estiver na proxima linha esta contido dentro da tag <body></body> no arquivo 'layoult.html' -->
+
+<!-- <h1>Olá {{variavel}}!</h1>  Título principal -->
+
+<h1 class="titulo_principal">Water quality</h1>
+
+<p>O monitoramento dos parâmetros de qualidade da água vem assumindo uma maior importância na atualidade, pois as águas dos reservatórios devem ter um nível mínimo de qualidade para que possa garantir a vida aquática e sua utilização para a manutenção e preservação da vida humana, fauna e flora do planeta.</p>
+
+<p>Pensando em melhorar o monitoramento da qualidade da água nos reservatórios brasileiros, foi desenvolvida essa plataforma web com o objetivo de fazer a predição de parâmetros limnólogicos, usando sensoriamento remoto, algoritmos de machine learnig, dados históricos de coletas da amostras de água, entre outras tecnologias.</p>
+
+<p>Foi criada uma aplicação web para fazer a predição de parâmetros limnólogicos no reservatório de Três Marias/MG.</p>
+
+<li><a href="http://127.0.0.1:5000/results" target="_self" rel="next">Reservatório de Tês marias</a></li> <!-- Adiciona acesso a pagina de resultados -->
+
+{% endblock %} <!-- Indica fim da tag <body></body> no arquivo 'layoult.html' -->

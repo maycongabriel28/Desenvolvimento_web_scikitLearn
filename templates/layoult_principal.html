@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web - python</title> <!-- Título da aba da página na web -->
+<style> /* Faz o design da página web */
+    body { /* Documento (página) */
+    background-color: #a6eaff; /* Define cor de fundo (CODIGO QUE DEFINE PALETA DE CORES)*/
+
+}
+
+.titulo_principal { /* Uso de classe */
+    /* color: #afb9e9;  Define cor de fundo */
+    border-radius: 10px; /* Arredonda bordas */
+   /* box-shadow: 5px 5px 15px #1c556d57;  adiciona sombras nas laterais */
+    color: white; /* Define cor da letra */
+    font-family: 'Times New Roman', Times, serif; /* Define família de fonte */
+    font-size: 2.5em; /* Define tamanho de fonte */
+    text-align: left; /* Centraliza conteúdo */
+}
+
+main { /* Conteúdo principal do documento onde fica calculadora */
+    background-color: white; /* Define cor de fundo */
+    border-radius: 10px; /* Arredonda bordas */
+    box-shadow: 5px 5px 15px #1c556d57; /* adiciona sombras nas laterais */
+    width: 600px; /* configura largura */
+    padding: 10px; /* configura distancia das margens para as letras */
+    margin: auto; /* Centraliza conteúdo no centro da tela de forma automatica */
+}
+
+#calc { /* Fundo painel onde aparecera resultado do calculo, data e hora */
+    background-color: #B1A6FF; /* Define cor de fundo */
+    border-radius: 10px; /* Arredonda bordas */
+    box-shadow: 5px 5px 15px #1c556d57; /* adiciona sombras nas laterais */
+    height: 45px; /* Define altura */
+    width: 240px; /* configura largura */
+    padding: 1px;  /* configura distancia das margens para as letras */
+    margin: auto; /* Centraliza conteúdo no centro da tela de forma automatica */
+}
+
+#branco { /* Coloca como branco o espaço criado entre a data e hora */
+    color: white; /* Coloca carachteres em branco */
+}
+</style>
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
