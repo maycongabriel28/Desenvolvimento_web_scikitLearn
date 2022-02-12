@@ -8,6 +8,12 @@ import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recur
 
 app = Flask(__name__)
 
+import os # importa biblioteca para entrada e saída de arquivo
+
+if __name__=='main':
+    port = int(os.getenv('PORT'), '5000')
+    app.run(host='0.0.0.0', port = port)
+
 # Carregando arquivo csv (arquivos separados por vírgulas pelo Excel) do banco de dados
 # usecols, seleciona colunas que possivelmente serão usadas no treinamento do algoritmo
 df2 = pd.read_csv("Dados_ajustados_uso.csv", usecols = ['B2', 'B3', 'B4', 'B55', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_S', 'turbidez_ZF'])
