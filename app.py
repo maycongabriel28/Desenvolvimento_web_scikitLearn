@@ -8,11 +8,11 @@ import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recur
 
 app = Flask(__name__)
 
-import os # importa biblioteca para entrada e saída de arquivo
+#import os # importa biblioteca para entrada e saída de arquivo
 
 if __name__=='main':
-    port = int(os.getenv('PORT'), '5000')
-    app.run(host='0.0.0.0', port = port)
+    #port = int(os.getenv('PORT'), '5000')
+    app.run(host='0.0.0.0', port = '5000')
 
 # Carregando arquivo csv (arquivos separados por vírgulas pelo Excel) do banco de dados
 # usecols, seleciona colunas que possivelmente serão usadas no treinamento do algoritmo
