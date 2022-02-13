@@ -1,8 +1,8 @@
 # Importa algumas funções do pacote flask para fazer o desenvolvimento de páginas web com python
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 import pandas as pd # Maniulação de arquivos     
-import matplotlib as mat # Analise gráfica visual
-import matplotlib.pyplot as plt # PLotagem de graficos
+#import matplotlib as mat # Analise gráfica visual
+#import matplotlib.pyplot as plt # PLotagem de graficos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
