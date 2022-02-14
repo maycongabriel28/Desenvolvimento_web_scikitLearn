@@ -15,4 +15,38 @@
 
 <li><a href="http://127.0.0.1:5000/results" target="_self" rel="next">Reservatório de Tês marias</a></li> <!-- Adiciona acesso a pagina de resultados -->
 
+
+
+
+
+<form action="{{url_for('resultado')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
+    <label for="">Informe parâmetro para predizer turbidez:</label>
+    <br>
+    <input type="text" name="parametro" placeholder="Insira um parâmetro">
+    <br> <br>
+    <label for="">Dado para predição:</label>
+    <br>
+    <input type="text" name="entrada" placeholder="Insira um número">
+    <br> <br>
+    <button>Enviar Dados</button>
+
+</form>
+
+<br>
+
+<a href="http://127.0.0.1:5000/results" target="_self" rel="prev"><button>Limpar Dados</button></a> <!-- Limpa campo com dados de predição (turbidez) e parâmetro escolhido para fazer a predição -->
+
+<p id='TM1'>Parâmetro escolhido para fazer predição: {{variavel}}</p>
+<p id='TM2'>Turbidez: {{variavel1}}</p>
+
+<br> <!-- Salta uma linha -->
+<li><a href="http://127.0.0.1:5000/" target="_self" rel="prev">Página principal</a></li> <!-- Retorna a página principal -->
+
+{% endblock %} <!-- Indica fim da tag <body></body> no arquivo 'layoult.html' -->
+
+
+
+
+
+
 {% endblock %} <!-- Indica fim da tag <body></body> no arquivo 'layoult.html' -->
