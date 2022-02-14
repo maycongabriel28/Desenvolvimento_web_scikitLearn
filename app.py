@@ -6,7 +6,7 @@ import pandas as pd # Maniulação de arquivos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
-
+from Desenvovimento_web_scikitLearn import machine
 import os # importa biblioteca para entrada e saída de arquivo
 
 app = Flask(__name__)
