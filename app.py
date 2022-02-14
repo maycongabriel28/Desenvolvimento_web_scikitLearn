@@ -98,7 +98,7 @@ def index():
     var9=df2
     return render_template('principal.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
-@app.route("/tres_marias", methods=["GET", "POST"]) # Paginas de resultados
+@app.route("/results_tres_marias", methods=["GET", "POST"]) # Paginas de resultados
 # GET = Acessa infromações no servidor
 # POST = Manda informações para o servidor
 def resultado():
