@@ -145,3 +145,6 @@ if __name__=='main':
 
 # COMANDO PARA CRIAR ARQUIVO REQUIREMENTS.TXT
 # pip list --format=freeze > requirements.txt
+
+#ACESSAE SITE
+# https://plattform.herokuapp.com/
