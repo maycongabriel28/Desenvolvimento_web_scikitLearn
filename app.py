@@ -5,7 +5,6 @@ import pandas as pd # Maniulação de arquivos
 #import matplotlib.pyplot as plt # PLotagem de graficos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
-from sklearn.linear_model import LinearRegression # Importando modulo machine learning de regressão linear
 
 from machine import dtr, modelo_v1
 import os # importa biblioteca para entrada e saída de arquivo
