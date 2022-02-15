@@ -1,5 +1,5 @@
 # Importa algumas funções do pacote flask para fazer o desenvolvimento de páginas web com python
-from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
+#from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 import pandas as pd # Maniulação de arquivos     
 #import matplotlib as mat # Analise gráfica visual
 #import matplotlib.pyplot as plt # PLotagem de graficos
