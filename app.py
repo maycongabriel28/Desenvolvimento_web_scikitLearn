@@ -1,12 +1,12 @@
 # Importa algumas funções do pacote flask para fazer o desenvolvimento de páginas web com python
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
-#import pandas as pd # Maniulação de arquivos     
+import pandas as pd # Maniulação de arquivos     
 #import matplotlib as mat # Analise gráfica visual
 #import matplotlib.pyplot as plt # PLotagem de graficos
-#import numpy as np # operações matematicas com arrays
-#import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
+import numpy as np # operações matematicas com arrays
+import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
-from machine import machine
+from machine import dtr, modelo_v1
 import os # importa biblioteca para entrada e saída de arquivo
 
 app = Flask(__name__)
@@ -16,9 +16,9 @@ app = Flask(__name__)
 def index():
 
     
-    var7= X
-    var8=Y
-    var9=df2
+    #var7= X
+    #var8=Y
+    #var9=df2
     return render_template('principal.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
 @app.route("/results_tres_marias", methods=["GET", "POST"]) # Paginas de resultados
