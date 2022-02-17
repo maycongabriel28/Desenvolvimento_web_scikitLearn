@@ -8,22 +8,29 @@
     <title>Desenvolvimento Web - python</title> <!-- Título da aba da página na web -->
     <style>
         body { /* Corpo de fundo da página */
-            font-family: Arial, Helvetica, sans-serif; /* Fonte de letras */
             background-color: #0117DB; /* Cor do fundo da pagina */
             margin: 0px; /* Não adiciona marfin em nenhum dos lados */
         }
     
         header { /* Cabeçalho da página */
-            
+
+            font-family: 'Times New Roman', Times, serif; /* Familia de fonte */
+            font-size: 1.8em; /* Tamanho da fonte (1em=16px) */
+            font-style: bold; /* Estilo da letra */
+            text-align: center;
             background-image: linear-gradient(360deg, #DBD816, white);
             margin: auto; /* Centraliza caixa no navegador */
-            padding: 17px; /* Distãncia do texto para a borda */
+            padding: 3px; /* Distãncia do texto para a borda */
             margin-top: 0px; /* Espaçamneto cima */
             margin-right: 42px; /* Espaçamento lado direito */
             margin-bottom: 22px; /* Espaçamento baixo */
             margin-left: 42px; /* Espaçamento lado esquerdo */
             border-radius: 10px 12px 10px 10px; /* Arredondamento de borda */
             box-shadow: 6px 6px 3px 0px #db8816; /* Adiciona sombras nas bordas das caixas (ajustar valores no Dev tools) */
+        }
+
+        header > h1 { /* TAG <h1> filha d <header> */
+            margin: 0px; /* Zera margem  */
         }
     
         nav {
