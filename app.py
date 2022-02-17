@@ -62,6 +62,7 @@ def resultado():
 #if __name__=="__main__": # Verifica se __name__ esta contido neste script
     #app.run(debug=True) # Executa este script, definindo endereço do servidor que ira rodar a aplicação e a porta
 if __name__=='main':
+    app.run(debug=True) # Executa este script, definindo endereço do servidor que ira rodar a aplicação e a porta
     port = int(os.getenv('PORT'), '5000')
     app.run(host='0.0.0.0', port = port)
 
