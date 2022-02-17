@@ -59,14 +59,12 @@ def resultado():
         return render_template('tres_marias.html', variavel=par, variavel1=pred) # renderiza na página o arquivo HTML e passa o nome da rota
 
 
-#if __name__=="__main__": # Verifica se __name__ esta contido neste script
-    #app.run(debug=True) # Executa este script, definindo endereço do servidor que ira rodar a aplicação e a porta
 if __name__=='main':
     port = int(os.getenv('PORT'), '5050')
     app.run(host='0.0.0.0', port = port)
 
-if __name__=="__main__": # Verifica se __name__ esta contido neste script
-    app.run(debug=True) # Executa este script, definindo endereço do servidor que ira rodar a aplicação e a porta
+#if __name__=="__main__": # Verifica se __name__ esta contido neste script
+    #app.run(debug=True) # Executa este script, definindo endereço do servidor que ira rodar a aplicação e a porta
 
 
 # COMANDO PARA CRIAR ARQUIVO REQUIREMENTS.TXT
