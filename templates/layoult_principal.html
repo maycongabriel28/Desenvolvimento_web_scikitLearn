@@ -5,45 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desenvolvimento Web - python</title> <!-- Título da aba da página na web -->
-<style> /* Faz o design da página web */
-    body { /* Documento (página) */
-    background-color: #deebf0; /* Define cor de fundo (CODIGO QUE DEFINE PALETA DE CORES)*/
 
-}
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif; /* Fonte de letras */
+        background-color: dimgray; /* Cor do fundo da pagina */
+        margin: 0px; /* Não adiciona marfin em nenhum dos lados */
+    }
 
-.titulo_principal { /* Uso de classe */
-    /* color: #afb9e9;  Define cor de fundo */
-    border-radius: 10px; /* Arredonda bordas */
-   /* box-shadow: 5px 5px 15px #1c556d57;  adiciona sombras nas laterais */
-    color: white; /* Define cor da letra */
-    font-family: 'Times New Roman', Times, serif; /* Define família de fonte */
-    font-size: 2.5em; /* Define tamanho de fonte */
-    text-align: left; /* Centraliza conteúdo */
-}
+    header {
+        background-color: white;
+        padding: 10px; /* Distãncia do texto para a borda */
+        margin: 10px; /* Distância da caixa do cabeçalho para as demais caixas */
+        border-radius: 10px; /* Arredondamento de bordas */
+        box-shadow: 3px 3px 6px 1px yellow; /* Adiciona sombras nas bordas das caixas (ajustar valores no Dev tools) */
+    }
 
-main { /* Conteúdo principal do documento onde fica calculadora */
-    background-color: white; /* Define cor de fundo */
-    border-radius: 10px; /* Arredonda bordas */
-    box-shadow: 5px 5px 15px #1c556d57; /* adiciona sombras nas laterais */
-    width: 600px; /* configura largura */
-    padding: 10px; /* configura distancia das margens para as letras */
-    margin: auto; /* Centraliza conteúdo no centro da tela de forma automatica */
-}
+    nav {
+        background-color: beige;
+        box-shadow: 3px 3px 6px 1px yellow; /* Adiciona sombras nas bordas das caixas (ajustar valores no Dev tools) */
+    }
 
-#calc { /* Fundo painel onde aparecera resultado do calculo, data e hora */
-    background-color: #B1A6FF; /* Define cor de fundo */
-    border-radius: 10px; /* Arredonda bordas */
-    box-shadow: 5px 5px 15px #1c556d57; /* adiciona sombras nas laterais */
-    height: 45px; /* Define altura */
-    width: 240px; /* configura largura */
-    padding: 1px;  /* configura distancia das margens para as letras */
-    margin: auto; /* Centraliza conteúdo no centro da tela de forma automatica */
-}
+    nav > a { /* TAG <a> é um filho da TAG <nav> */
+        text-decoration: none; /* Retira sublinhado do text do link */
+        color: blue;
+        font-weight: bold; /* Espessura das letras */
+        margin-right: 30px; /* Define margem a direita */
+    }
 
-#branco { /* Coloca como branco o espaço criado entre a data e hora */
-    color: white; /* Coloca carachteres em branco */
-}
+    nav > a:hover { /* Executa ação ao passar mouse sobre texto dos links */
+        text-decoration: underline;  /* adiciona sublinhado nos textos dos links */
+        color: brown;
+    }
+
+    main {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px; /* Arredondamento de bordas */
+    }
+
+    article > aside {
+        background-color: aquamarine;
+        margin: 5px;
+    }
+
+    article {
+        background-color: lightgray;
+        padding: 5px;
+    }
+
+    footer {
+        background-color: black;
+        color: white; /* Cor da letra */
+        text-align: center; /* Centraliza texto na página */
+        padding: 4px;
+        margin: 0px;
+    }
+
+    footer > p { /* Retira margem do paragrafo no rodapé */
+        margin: 0px; 
+    }
 </style>
+
 </head>
 <body>
     {% block body %}
