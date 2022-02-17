@@ -2,21 +2,16 @@
 {% extends "layoult_tres_marias.html" %} <!-- Restante do conteudo esta no arquivo 'layoult.html' -->
 {% block body %} <!-- Indica que o conteudo que estiver na proxima linha esta contido dentro da tag <body></body> no arquivo 'layoult.html' -->
 
-<header> <!-- TAG semantica cabeçalho -->
-    <h1 class="titulo_principal">Análise reservatório de Três Marias/MG</h1>
-</header>
-
 <main> <!-- TAG semantica conteúdo principal -->
     <section>
+        <h1>Análise reservatório de Três Marias/MG</h1>
         <article>
             <p>Para fazer a predição de parâmetros limnólogicos no reservatório de Três Marias, usou dados históricos de coletas de amostras de água, dados espectrais de imagens do satelite Landsat 8 OLI, algoritmos de machine learnig. Foi feito o treinamento de algoritmos de machine learning para fazer a predição do parâmetro turbidez (até o momento).</p>
 
             <p>Para fazer o treinamento do algoritmo de machine learning regressão linear, usou informações espectrais das bandas 2, 3, 4, 5 do Landsat 8 OLI e também os dados históricos de parâmetros limnólogicos cor verdadeira, sulfato e turbidez (Zona fótica).</p>
         </article>
-    </section>
 
-    <section id="noticias">
-        <article> <!-- conten um conteúdo que pode ser lido de forma independente -->
+        <article> <!-- contém um conteúdo que pode ser lido de forma independente -->
             <h2>Predição de turbidez-mg/l</h2>
                 <p>Escolha um dentre os parâmetros abaixo para fazer a predição de turbidez:</p>
 
@@ -47,9 +42,7 @@
                 </form>
             </aside>
         </article>
-    </section>
 
-    <section> <!-- Resultado da predição -->
         <article>
             <h3>Resultado da predição de turbidez</h3>
             <aside>
@@ -57,9 +50,7 @@
                 <p id='TM2'>Turbidez: {{variavel1}}</p>
             </aside>
         </article>
-    </section>
 
-    <section> <!-- Retorna página principal -->
         <article>
             <li><a href="/" target="_self" rel="prev">Página principal</a></li> <!-- Retorna a página principal -->
         </article>
