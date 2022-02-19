@@ -19,14 +19,14 @@
                 <ul>
                     <li>B2 - Banda 2</li>
                     <li>B3 - Banda 3</li>
-                    <li>B4 - Banda 3</li>
-                    <li>B55 - Banda 3</li>
+                    <li>B4 - Banda 4</li>
+                    <li>B55 - Banda 5</li>
                     <li>cor_verdadeira_S - Superfície</li>
                     <li>sulfato_S - Superfície</li>
                     <li>turbidez_ZF - Zona fótica</li>
                 </ul>
 
-                <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer turbidez" com os parâmetros iguais aos da lista abaixo.</p>
+                <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer turbidez" com os parâmetros iguais aos da lista acima.</p>
             <aside> <!-- Complementa um conteúdo principal de um <article> ou <secton> -->
                 <form action="{{url_for('resultado')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
                     <label for="">Informe parâmetro para predizer turbidez:</label>
@@ -47,13 +47,12 @@
         <article>
             <h2>Resultado da predição de turbidez</h2>
             <aside>
-                <p id='TM1'>Parâmetro escolhido para fazer predição: <span>{{variavel}}</span></p>
                 <p id='TM2'>Turbidez: <span>{{variavel1}}</span></p>
             </aside>
         </article>
 
         <article>
-            <li><a href="/" target="_self" rel="prev">Página principal</a></li> <!-- Retorna a página principal -->
+            <li>Retornar para <a href="/" target="_self" rel="prev">Página principal</a>.</li> <!-- Retorna a página principal -->
         </article>
     </section>
 
