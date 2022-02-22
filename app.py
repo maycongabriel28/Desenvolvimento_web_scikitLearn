@@ -1,8 +1,6 @@
 # Importa algumas funções do pacote flask para fazer o desenvolvimento de páginas web com python
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 import pandas as pd # Maniulação de arquivos     
-#import matplotlib as mat # Analise gráfica visual
-#import matplotlib.pyplot as plt # PLotagem de graficos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
@@ -43,7 +41,7 @@ def resultado():
         # Predizendo valores com entradas informadas pelo usuario
 
         # Média dos dados contidos nas colunas dos dados de treinamento (X_treino)
-        vec_dados=np.array([[dtr['B2'].mean(), dtr['B3'].mean(), dtr['B4'].mean(), dtr['B55'].mean(), 
+        vec_dados=np.array([[dtr['B2'].mean(), dtr['B3'].mean(), dtr['B4'].mean(), 
                      dtr['cor_verdadeira_S'].mean(), dtr['sulfato_S'].mean(), dtr['turbidez_ZF'].mean()]])
         
         # Cria Dataframe com média dos dados de treinamento (X_treino) 
@@ -51,7 +49,7 @@ def resultado():
 
 
         # Adiciona um novo valor de 'nível de cinza' na banda 4 do landsat 8 para ser usada na predição de turbidez_S
-        dtp[par] = np.array([[valor]])
+        dtp[par] = np.array([[valor/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
 
         # Predição de novos valores com dados de entrada do usuario
         pred=modelo_v1.predict(dtp)
