@@ -51,7 +51,7 @@ dtr=pd.DataFrame(X_treino, columns=['B2', 'B3', 'B4', 'cor_verdadeira_S', 'sulfa
 # Converte dados de saída de treinamento em formato numpy (array) para dataframe
 dt=pd.DataFrame(Y_treino, columns=['turbidez_S'])
 
-from sklearn.linear_model import LinearRegression # Importando modulo machine learning de regressão linear
+from sklearn.linear_model import LassoCV # Retressãoi linear usando validação cruzada
 
 # Criando objeto de regressão de LASSOCV
 modelo_v1=LassoCV(cv=5, random_state=0)
