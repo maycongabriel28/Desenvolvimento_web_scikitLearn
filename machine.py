@@ -17,7 +17,7 @@ from sklearn.model_selection import train_test_split # Importa função do sciki
 
 # Seleção de variáveis preditoras (variaveis indepedentes), que são as colunas do dataset que contem as informações das bandas das imagens e dados 
 # limnologicos de outros parâmetros de qualidade de água, para fazer a predição do parâmetro de qualidade da água escolhido
-atributos = ['B2', 'B3', 'B4', 'B55', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'] # Colunas do dataset
+atributos = ['B2', 'B3', 'B4', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'] # Colunas do dataset
 
 # Variável a ser prevista (variavel depedente), e a coluna no dataset que vai informar a quantidade de turbidez que contém na água
 atrib_prev = ['turbidez_S'] # Coluna do dataset
