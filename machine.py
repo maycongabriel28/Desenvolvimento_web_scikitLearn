@@ -46,7 +46,7 @@ X_teste = preenche_0.fit_transform(X_teste) # Dados de entrada de teste
 Y_teste = preenche_0.fit_transform(Y_teste) # Dados de saída de teste
 
 # Converte dados de entrada de treinamento em formato numpy (array) para dataframe
-dtr=pd.DataFrame(X_treino, columns=['B2', 'B3', 'B4', 'B55', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'])
+dtr=pd.DataFrame(X_treino, columns=['B2', 'B3', 'B4', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'])
 
 # Converte dados de saída de treinamento em formato numpy (array) para dataframe
 dt=pd.DataFrame(Y_treino, columns=['turbidez_S'])
