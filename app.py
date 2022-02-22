@@ -45,7 +45,7 @@ def resultado():
                      dtr['cor_verdadeira_S'].mean(), dtr['sulfato_S'].mean(), dtr['turbidez_ZF'].mean()]])
         
         # Cria Dataframe com média dos dados de treinamento (X_treino) 
-        dtp=pd.DataFrame(vec_dados, columns=['B2', 'B3', 'B4', 'B55', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'])
+        dtp=pd.DataFrame(vec_dados, columns=['B2', 'B3', 'B4', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'])
 
 
         # Adiciona um novo valor de 'nível de cinza' na banda 4 do landsat 8 para ser usada na predição de turbidez_S
