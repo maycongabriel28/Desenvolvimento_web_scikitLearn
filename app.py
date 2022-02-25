@@ -17,7 +17,7 @@ def index():
     #var7= X
     #var8=Y
     #var9=df2
-    return render_template('principal.html') # renderiza na página o arquivo HTML e passa o nome da rota
+    return render_template('/pagina_principal/principal.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
 @app.route("/results_tres_marias", methods=["GET", "POST"]) # Paginas de resultados
 # GET = Acessa infromações no servidor
