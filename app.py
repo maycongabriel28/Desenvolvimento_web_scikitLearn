@@ -36,6 +36,9 @@ def resultado():
         # Acessa nível de cinza passadas para predizer valor de turbidez
         valor = int(request.form.get("entrada"))
 
+        if par=="":
+            
+            return render_template('/resultado_tres_marias/tres_marias_dados.html') # renderiza na página o arquivo HTML e passa o nome da rota
         #############################################################
         # Predizendo valores com entradas informadas pelo usuario
 
