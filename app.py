@@ -26,7 +26,7 @@ def resultado():
     
     if request.method == "GET": # Verifica se foi feita a busca de dados no servidor
 
-        return render_template('tres_marias.html') # renderiza na página o arquivo HTML e passa o nome da rota
+        return render_template('/resultado_tres_marias/tres_marias.html') # renderiza na página o arquivo HTML e passa o nome da rota
     
     else:
 
@@ -53,7 +53,7 @@ def resultado():
         # Predição de novos valores com dados de entrada do usuario
         pred=modelo_v1.predict(dtp)
 
-        return render_template('tres_marias.html', variavel=par, variavel1=pred) # renderiza na página o arquivo HTML e passa o nome da rota
+        return render_template('/resultado_tres_marias/tres_marias.html', variavel=par, variavel1=pred) # renderiza na página o arquivo HTML e passa o nome da rota
 
 
 if __name__=='main':
