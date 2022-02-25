@@ -26,7 +26,6 @@ def resultado():
     
     if request.method == "GET": # Verifica se foi feita a busca de dados no servidor
 
-
         return render_template('tres_marias.html') # renderiza na página o arquivo HTML e passa o nome da rota
     
     else:
