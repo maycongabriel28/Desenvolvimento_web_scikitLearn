@@ -56,7 +56,7 @@ def resultado():
         valor_number = is_number(valor) # Verifica se strig é numero
         par_string = is_number(par) # Verifica se string é string
 
-        if par=="" or valor=="" or valor_number==False or par_string==True or par!="B4":
+        if par=="" or valor=="" or valor_number==False or par_string==True or par!="B2" or par!="B3" or par!="B4" or par!="cor_verdadeira_S" or par!="sulfato_S" or par!="turbidez_ZF":
             
             return render_template('/resultado_tres_marias/tres_marias_dados.html') # renderiza na página o arquivo HTML e passa o nome da rota
         #############################################################
@@ -76,7 +76,7 @@ def resultado():
         # Predição de novos valores com dados de entrada do usuario
         pred=modelo_v1.predict(dtp)
 
-        if pred < 0:
+        if pred < 0: # Se valor de resultado de predição for menor que zero
 
             return render_template('/resultado_tres_marias/tres_marias_resultado_negativo.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
