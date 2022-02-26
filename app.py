@@ -36,7 +36,27 @@ def resultado():
         # Acessa nível de cinza passadas para predizer valor de turbidez
         valor = str(request.form.get("entrada"))
 
-        if valor=="":
+        def is_number(num):
+        
+            try:
+                #Try to convert the input. 
+                float(num)
+                
+                #If successful, returns true.
+                return True # String é Numero
+                
+            except:
+                #Silently ignores any exception.
+                pass # ignora excessões
+            
+            #If this point was reached, the input is not a number and the function
+            #will return False.
+            return False # String não e numero
+
+        valor_number = is_number(valor) # Verifica se strig é numero
+        par_string = is_number(par) # Verifica se string é string
+
+        if par=="" or valor=="" or valor_number==False or par_string==True or par!="B4":
             
             return render_template('/resultado_tres_marias/tres_marias_dados.html') # renderiza na página o arquivo HTML e passa o nome da rota
         #############################################################
@@ -51,10 +71,14 @@ def resultado():
 
 
         # Adiciona um novo valor de 'nível de cinza' na banda 4 do landsat 8 para ser usada na predição de turbidez_S
-        dtp[par] = np.array([[int(valor)/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
+        dtp[par] = np.array([[float(valor)/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
 
         # Predição de novos valores com dados de entrada do usuario
         pred=modelo_v1.predict(dtp)
+
+        if pred < 0:
+
+            return render_template('/resultado_tres_marias/tres_marias_resultado_negativo.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
         return render_template('/resultado_tres_marias/tres_marias.html', variavel=par, variavel1=pred) # renderiza na página o arquivo HTML e passa o nome da rota
 

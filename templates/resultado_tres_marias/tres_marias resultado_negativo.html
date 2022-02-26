@@ -1,0 +1,61 @@
+<!-- Conteudo a ser exibido na página -->
+{% extends "/resultado_tres_marias/layoult_tres_marias.html" %} <!-- Restante do conteudo esta no arquivo 'layoult.html' -->
+{% block body %} <!-- Indica que o conteudo que estiver na proxima linha esta contido dentro da tag <body></body> no arquivo 'layoult.html' -->
+
+<main> <!-- TAG semantica conteúdo principal -->
+    <section>
+        <article>
+            <h1>Análise reservatório de Três Marias/MG</h1>
+
+            <p>Para fazer a predição de parâmetros limnólogicos no reservatório de Três Marias, usou dados históricos de coletas de amostras de água, dados espectrais de imagens do satelite Landsat 8 OLI, algoritmos de machine learnig. Foi feito o treinamento de algoritmos de machine learning para fazer a predição do parâmetro turbidez (até o momento).</p>
+
+            <p>Para fazer o treinamento do algoritmo de machine learning regressão linear, usou informações espectrais das bandas 2, 3, 4, 5 do Landsat 8 OLI e também os dados históricos de parâmetros limnólogicos cor verdadeira, sulfato e turbidez (Zona fótica).</p>
+        </article>
+
+        <article> <!-- contém um conteúdo que pode ser lido de forma independente -->
+            <h2>Predição de turbidez-mg/l</h2>
+                <p>Escolha um dentre os parâmetros abaixo para fazer a predição de turbidez:</p>
+
+                <ul>
+                    <li>B2 - Banda 2</li>
+                    <li>B3 - Banda 3</li>
+                    <li>B4 - Banda 4</li>
+                    <li>B55 - Banda 5</li>
+                    <li>cor_verdadeira_S - Superfície</li>
+                    <li>sulfato_S - Superfície</li>
+                    <li>turbidez_ZF - Zona fótica</li>
+                </ul>
+
+                <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer turbidez" com os parâmetros iguais aos da lista acima.</p>
+            <aside> <!-- Complementa um conteúdo principal de um <article> ou <secton> -->
+                <form action="{{url_for('resultado')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
+                    <label for="">Informe parâmetro para predizer turbidez:</label>
+                    <br>
+                    <input type="text" name="parametro" placeholder="Insira um parâmetro">
+                    <br> <br>
+                    <label for="">Dado para predição:</label>
+                    <br>
+                    <input type="text" name="entrada" placeholder="Insira um número">
+                    <br>
+                    <button id="enviar_dados">Enviar Dados</button>
+                
+                </form>
+                    <a href="/results_tres_marias" target="_self" rel="prev"><button id="limpar_dados">Limpar Dados</button></a>  <!-- Limpa campo com dados de predição (turbidez) e parâmetro escolhido para fazer a predição -->
+            </aside>
+        </article>
+
+        <article>
+            <h2>Resultado da predição de turbidez</h2>
+            <aside>
+                <p id='TM2'>Turbidez: <span>Não foi possível fazer predição, informe um outro valor no parâmetro de predição!</span></p>
+            </aside>
+        </article>
+
+        <article>
+            <li>Retornar para <a href="/" target="_self" rel="prev">Página principal</a>.</li> <!-- Retorna a página principal -->
+        </article>
+    </section>
+
+</main>
+
+{% endblock %} <!-- Indica fim da tag <body></body> no arquivo 'layoult.html' -->
