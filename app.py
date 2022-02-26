@@ -34,9 +34,9 @@ def resultado():
         par = str(request.form.get("parametro"))
 
         # Acessa nível de cinza passadas para predizer valor de turbidez
-        valor = int(request.form.get("entrada"))
+        valor = str(request.form.get("entrada"))
 
-        if par=="":
+        if valor=="":
             
             return render_template('/resultado_tres_marias/tres_marias_dados.html') # renderiza na página o arquivo HTML e passa o nome da rota
         #############################################################
@@ -51,7 +51,7 @@ def resultado():
 
 
         # Adiciona um novo valor de 'nível de cinza' na banda 4 do landsat 8 para ser usada na predição de turbidez_S
-        dtp[par] = np.array([[valor/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
+        dtp[par] = np.array([[int(valor)/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
 
         # Predição de novos valores com dados de entrada do usuario
         pred=modelo_v1.predict(dtp)
