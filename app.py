@@ -69,9 +69,14 @@ def resultado():
         # Cria Dataframe com média dos dados de treinamento (X_treino) 
         dtp=pd.DataFrame(vec_dados, columns=['B2', 'B3', 'B4', 'cor_verdadeira_S', 'sulfato_S', 'turbidez_ZF'])
 
+        if par=="B2" or par=="B3" or par=="B4": # verifica se ira fazer predição com bandas ou parâmetros limnologicos
 
-        # Adiciona um novo valor de 'nível de cinza' na banda 4 do landsat 8 para ser usada na predição de turbidez_S
-        dtp[par] = np.array([[float(valor)/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
+            # Adiciona valores realciondos algum dos parâmetros preditores (B2, B3, B4)
+            dtp[par] = np.array([[float(valor)/10]]) # A divisão por 10 e para fazer a normalização do valor a ser predito (NORMALIZAÇÃO APENAS PARA AS BANDAS)
+        else:
+            
+            # Adiciona valores realciondos algum dos parâmetros preditores (cor_verdadeira_S, sulfato_S, turbidez_ZF)
+            dtp[par] = np.array([[float(valor)]]) # Nova variavel preditora
 
         # Predição de novos valores com dados de entrada do usuario
         pred=modelo_v1.predict(dtp)
@@ -80,7 +85,7 @@ def resultado():
 
             return render_template('/resultado_tres_marias/tres_marias_resultado_negativo.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
-        return render_template('/resultado_tres_marias/tres_marias.html', variavel=par, variavel1=pred) # renderiza na página o arquivo HTML e passa o nome da rota
+        return render_template('/resultado_tres_marias/tres_marias.html', variavel=par, variavel1=li) # renderiza na página o arquivo HTML e passa o nome da rota
 
 
 if __name__=='main':
