@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="agua.ico" type="image/x-icon">
+    <title>Desenvolvimento Web - python</title> <!-- Título da aba da página na web -->
+    <style>
+        body { /* Corpo de fundo da página */
+            background-color: #000000;  /* Cor do fundo da pagina */
+        }
+
+        h1 { /* Cabeçalho da página */
+            font-family: 'Times New Roman', Times, serif; /* Familia de fonte */
+            font-size: 1.5em; /* Tamanho da fonte (1em=16px) */
+            font-style: bold; /* Estilo da letra */
+            margin: auto; /* Centraliza caixa no navegador */
+            padding: 3px; /* Distãncia do texto para a borda */
+            border-radius: 10px 12px 10px 10px; /* Arredondamento de borda */ 
+        }
+
+        h2 { /* Sub-título +/
+            font-family: 'Times New Roman', Times, serif; /* Familia de fonte */
+            font-size: 1.2em; /* Tamanho da fonte (1em=16px) */
+            font-style: bold; /* Estilo da letra */
+            margin: auto; /* Centraliza caixa no navegador */
+            padding: 3px; /* Distãncia do texto para a borda */
+            border-radius: 10px 12px 10px 10px; /* Arredondamento de borda */
+        }
+    
+        main { /* Conteúdo principal da página */
+            margin: auto; /* Centraliza caixa no navegador */
+            padding: 3px; /* Distãncia do texto para a borda */
+            margin-top: 0px; /* Espaçamneto cima */
+            margin-right: 1px; /* Espaçamento lado direito 42*/
+            margin-bottom: 22px; /* Espaçamento baixo */
+            margin-left: 1px; /* Espaçamento lado esquerdo 42*/
+        }
+    
+    
+        article { /* Conteudo de apenas um determinado asssunto */
+            font-family: Arial, Helvetica, sans-serif; /* Familia de fonte */
+            font-size: 1.0em; /* Tamanho da fonte (1em=16px) */
+            font-style: normal; /* Estilo da letra */
+            text-align: justify; /* Faz o alinhamento do texto */
+            background-color: white;
+            margin: auto; /* Centraliza caixa no navegador */
+            padding: 3px; /* Distãncia do texto para a borda */
+            margin-top: 0px; /* Espaçamneto cima */
+            margin-right: 0px; /* Espaçamento lado direito 42*/
+            margin-bottom: 9px; /* Espaçamento baixo 22*/
+            margin-left: 0px; /* Espaçamento lado esquerdo 42*/
+            border-radius: 10px 12px 10px 10px; /* Arredondamento de borda */
+        }
+
+        #enviar_dados { /* Botão de enviar dados */
+            margin-top: 20px; /* Margem de cima */
+        }
+
+        #limpar_dados { /* Botão de limpar dados */
+            margin-top: 20px; /* Margem de cima */
+            margin-bottom: 10px; /* Margem de baixo */
+        }
+
+        span { /* Resultado turbidez */
+            font-family: Arial, Helvetica, sans-serif; /* Familia de fonte */
+            font-style: oblique; /* Estilo da letra */
+        }
+
+        a { /* Designer dos links */
+            color: #0B8DDB; /* Muda cor do texto dos links */
+            text-decoration: none; /* Retira sublinhado dos textos */
+            font-weight: normal; /* Coloca texto em negrito */
+        }
+
+        a:hover { /* Executa ação ao passar o mouse sobre o texto */
+            color: #670BDB; /* Coloca texto preto */
+            text-decoration: underline; /* Coloca texto sublinhado */
+        }
+    
+    </style>
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

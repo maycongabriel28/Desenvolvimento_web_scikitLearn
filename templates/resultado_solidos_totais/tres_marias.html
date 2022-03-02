@@ -1,5 +1,5 @@
 <!-- Conteudo a ser exibido na página -->
-{% extends "/resultado_tres_marias/layoult_tres_marias.html" %} <!-- Restante do conteudo esta no arquivo 'layoult.html' -->
+{% extends "/resultado_solidos_totais/layoult_tres_marias.html" %} <!-- Restante do conteudo esta no arquivo 'layoult.html' -->
 {% block body %} <!-- Indica que o conteudo que estiver na proxima linha esta contido dentro da tag <body></body> no arquivo 'layoult.html' -->
 
 <main> <!-- TAG semantica conteúdo principal -->
@@ -28,7 +28,7 @@
 
                 <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer turbidez" com os parâmetros iguais aos da lista acima.</p>
             <aside> <!-- Complementa um conteúdo principal de um <article> ou <secton> -->
-                <form action="{{url_for('resultado_turbidez')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
+                <form action="{{url_for('resultado_solidos_totais')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
                     <label for="">Informe parâmetro para predizer turbidez:</label>
                     <br>
                     <input type="text" name="parametro" placeholder="Insira um parâmetro">
@@ -40,7 +40,7 @@
                     <button id="enviar_dados">Enviar Dados</button>
                 
                 </form>
-                    <a href="/results_tres_marias" target="_self" rel="prev"><button id="limpar_dados">Limpar Dados</button></a>  <!-- Limpa campo com dados de predição (turbidez) e parâmetro escolhido para fazer a predição -->
+                    <a href="/results_tres_marias_solidos_totais" target="_self" rel="prev"><button id="limpar_dados">Limpar Dados</button></a>  <!-- Limpa campo com dados de predição (turbidez) e parâmetro escolhido para fazer a predição -->
             </aside>
         </article>
 
