@@ -4,7 +4,7 @@ import pandas as pd # Maniulação de arquivos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
-from machine import dtr, modelo_v1 # importa variveis da arquivo machine.py
+from modelo_turbidez import dtr, modelo_v1 # importa variveis da arquivo machine.py
 import os # importa biblioteca para entrada e saída de arquivo
 
 app = Flask(__name__)
