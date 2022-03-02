@@ -28,7 +28,7 @@
 
                 <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer turbidez" com os parâmetros iguais aos da lista acima.</p>
             <aside> <!-- Complementa um conteúdo principal de um <article> ou <secton> -->
-                <form action="{{url_for('resultado')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
+                <form action="{{url_for('resultado_turbidez')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
                     <label for="">Informe parâmetro para predizer turbidez:</label>
                     <br>
                     <input type="text" name="parametro" placeholder="Insira um parâmetro">

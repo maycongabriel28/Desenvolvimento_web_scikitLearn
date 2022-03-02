@@ -4,12 +4,12 @@ import pandas as pd # Maniulação de arquivos
 import numpy as np # operações matematicas com arrays
 import sklearn as sk # importa pacate scikit-learn, onde traz algoritmos e recurso de Machine Learnig
 
-from modelo_turbidez import dtr, modelo_v1 # importa variveis da arquivo machine.py
+from modelo_turbidez import dtr, modelo_v1 # importa variveis da arquivo modelo_turbidez.py
+from modelo_solidos_totais import dts, modelo_v2 # importa variveis da arquivo modelo_solidos_totais.py
 import os # importa biblioteca para entrada e saída de arquivo
 
 app = Flask(__name__)
-
-
+#####################################################################################################################
 @app.route("/") # rota principal
 def index():
 
@@ -19,10 +19,11 @@ def index():
     #var9=df2
     return render_template('/pagina_principal/principal.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
+#####################################################################################################################
 @app.route("/results_tres_marias", methods=["GET", "POST"]) # Paginas de resultados
 # GET = Acessa infromações no servidor
 # POST = Manda informações para o servidor
-def resultado():
+def resultado_turbidez():
     
     if request.method == "GET": # Verifica se foi feita a busca de dados no servidor
 
@@ -85,9 +86,12 @@ def resultado():
 
             return render_template('/resultado_tres_marias/tres_marias_resultado_negativo.html') # renderiza na página o arquivo HTML e passa o nome da rota
 
-        return render_template('/resultado_tres_marias/tres_marias.html', variavel=par, variavel1=li) # renderiza na página o arquivo HTML e passa o nome da rota
+        return render_template('/resultado_tres_marias/tres_marias.html', variavel=par, variavel1=pred) # renderiza na página o arquivo HTML e passa o nome da rota
+
+#####################################################################################################################
 
 
+#####################################################################################################################
 if __name__=='main':
     port = int(os.getenv('PORT'), '5050')
     app.run(host='0.0.0.0', port = port)
