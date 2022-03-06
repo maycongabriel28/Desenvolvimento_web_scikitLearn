@@ -7,9 +7,11 @@
         <article>
             <h1>Análise reservatório de Três Marias/MG</h1>
 
-            <p>Para fazer a predição de parâmetros limnólogicos no reservatório de Três Marias, usou dados históricos de coletas de amostras de água, dados espectrais de imagens do satelite Landsat 8 OLI, algoritmos de machine learnig. Foi feito o treinamento de algoritmos de machine learning para fazer a predição do parâmetro sólidos totais.</p>
+            <p>Foi feito um estudo de caso no reservatório de Três Marias/MG, esse é um importante reservatório brasileiro localizado no estado de Minas Gerais que alaga diversos cidades e municípios na região central do estado, ele é usado pela população ribeirinha como renda através de pesca, turismo e comércios, além de abastecer essas cidades com sua água para a sua população.
+            </p>
 
-            <p>Para fazer o treinamento do algoritmo de machine learning regressão de Lasso, usou informações espectrais das bandas 1, 2, 4, 5, 6 e 7 do Landsat 8 OLI e também os dados históricos de parâmetros limnólogicos sulfato e sóidos dissolvidos totais (sdt).</p>
+            <p>O parâmetro a ser predito aqui e o sólidos totais é um importante parâmetro para ser monitorado para garantir um nível mínimo de qualidade do reservatório. Para fazer essa predição aqui na plataforma é preciso informar qual parâmetro preditor vai ser usado.
+            </p>
         </article>
 
         <article> <!-- contém um conteúdo que pode ser lido de forma independente -->
@@ -27,7 +29,8 @@
                     <li>sdt_S - Superfície</li>
                 </ul>
 
-                <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer sólidos totais" com os parâmetros iguais aos da lista acima.</p>
+                <p>OBS: Preencha o campo "Informe parâmetro para predizer sólidos totais" com os parâmetros IGUAIS (B1, B2, ..., sulfato_S,...) aos da lista acima.</p>
+                <p>Preencha o campo "Dado para predição" de acordo com o parâmetro que foi selecionado. Ex: se for usado uma das bandas (B1, B2, B4, B55, B6 ou B7) espectrais deve ser informado a informação espectral (nível digital do pixel na região escolhida do reservatório) da banda.</p>
             <aside> <!-- Complementa um conteúdo principal de um <article> ou <secton> -->
                 <form action="{{url_for('resultado_solidos_totais')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
                     <label for="">Informe parâmetro para predizer sólidos totais:</label>

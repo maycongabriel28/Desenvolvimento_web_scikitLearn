@@ -7,9 +7,11 @@
         <article>
             <h1>Análise reservatório de Três Marias/MG</h1>
 
-            <p>Para fazer a predição de parâmetros limnólogicos no reservatório de Três Marias, usou dados históricos de coletas de amostras de água, dados espectrais de imagens do satelite Landsat 8 OLI, algoritmos de machine learnig. Foi feito o treinamento de algoritmos de machine learning para fazer a predição do parâmetro turbidez.</p>
+            <p>Foi feito um estudo de caso no reservatório de Três Marias/MG, esse é um importante reservatório brasileiro localizado no estado de Minas Gerais que alaga diversos cidades e municípios na região central do estado, ele é usado pela população ribeirinha como renda através de pesca, turismo e comércios, além de abastecer essas cidades com sua água para a sua população.
+            </p>
 
-            <p>Para fazer o treinamento do algoritmo de machine learning regressão linear, usou informações espectrais das bandas 2, 3, 4 do Landsat 8 OLI e também os dados históricos de parâmetros limnólogicos cor verdadeira, sulfato e turbidez (Zona fótica).</p>
+            <p>O parâmetro a ser predito aqui e a turbidez é um importante parâmetro para ser monitorado para garantir um nível mínimo de qualidade do reservatório. Para fazer essa predição aqui na plataforma é preciso informar qual parâmetro preditor vai ser usado.
+            </p>
         </article>
 
         <article> <!-- contém um conteúdo que pode ser lido de forma independente -->
@@ -25,7 +27,9 @@
                     <li>turbidez_ZF - Zona fótica</li>
                 </ul>
 
-                <p id="destaque">OBS: Preencha o campo "Informe parâmetro para predizer turbidez" com os parâmetros iguais aos da lista acima.</p>
+                <p>OBS: Preencha o campo "Informe parâmetro para predizer sólidos totais" com os parâmetros IGUAIS (B2, B3, ..., cor_verdadeira_S,...) aos da lista acima.</p>
+                <p>Preencha o campo "Dado para predição" de acordo com o parâmetro que foi selecionado. Ex: se for usado uma das bandas (B2, B3, B4) espectrais deve ser informado a informação espectral (nível digital do pixel na região escolhida do reservatório) da banda.</p>
+
             <aside> <!-- Complementa um conteúdo principal de um <article> ou <secton> -->
                 <form action="{{url_for('resultado_turbidez')}}", method="post"> <!-- Acessa função resultado e e manda informaçõe para o servidor (POST) -->
                     <label for="">Informe parâmetro para predizer turbidez:</label>
