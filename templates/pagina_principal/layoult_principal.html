@@ -8,7 +8,7 @@
     <title>Desenvolvimento Web - python</title> <!-- Título da aba da página na web -->
     <style>
         body { /* Corpo de fundo da página */
-            background-color: rgb(255, 255, 255);  /* Cor do fundo da pagina #670BDB*/
+            background-color: rgb(185, 162, 162);  /* Cor do fundo da pagina #670BDB*/
             margin: 0px; /* Não adiciona marfin em nenhum dos lados */
         }
     
@@ -34,7 +34,9 @@
         }
     
         main { /* Conteúdo principal da página */
-            margin-bottom: 0px; /* Espaçamento baixo */
+            min-width: 320px; /* Largura mínima (largura maxima celulares antigos) */
+            max-width: 800px; /* Largura maxima */
+            margin: auto; /* Centraliza bloco */
         }
     
     
@@ -95,6 +97,15 @@
         footer > p { /* Retira margem do paragrafo no rodapé */
             margin: 0px; 
         }
+
+        img { /* Estilização de imagem */
+            margin-top: auto; /* Espaçamneto cima */
+            margin-right: auto; /* Espaçamento lado direito */
+            margin-bottom: auto; /* Espaçamento baixo */
+            margin-left: auto; /* Espaçamento lado esquerdo */
+            border-radius: 10px 12px 10px 10px; /* Arredondamento de borda */
+        }
+
     </style>
 </head>
 <body>
