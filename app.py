@@ -173,7 +173,7 @@ if __name__=="__main__": # Verifica se __name__ esta contido neste script
 # COMANDO PARA CRIAR ARQUIVO REQUIREMENTS.TXT
 # pip list --format=freeze > requirements.txt
 
-#ACESSAE SITE
+#ACESSAR SITE
 # https://plattform.herokuapp.com/
 
 #PALETA DE CORES USADA_Dividir complementar duas vezes
